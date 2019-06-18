@@ -5,29 +5,29 @@
   <link href="https://fonts.googleapis.com/css?family=Cantarell&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
   <link href="css/styles.css" rel="stylesheet" type="text/css">
-  <!-- <script src="js/bootstrap.js"></script> -->
   <script src="js/jquery-3.4.1.js"></script>
+  <script src="js/bootstrap.js"></script>
   <script src="js/scripts.js"></script>
   <title>Bank Account</title>
 </head>
 <body>
   <div class="container">
     <div class="row">
-      <div class="col card bg-success">
+      <div id="initialInfo" class="col card bg-success mx-auto">
         <div class="card-header text-white">Register a new account:</div>
         <form id="bankForm">
           <div class="form-group form-inline">
             <label for="userName">Name:</label>
             <input id="userName" type="text" name="userName" class="form-control">
           </div>
-
+          
           <div class="form-group form-inline">
             <label for="userDeposit">Initial Deposit:</label>
             <input id="userDeposit" type="number" name="userDeposit" class="form-control">
           </div>
         </div>
 
-        <div class="col card bg-success">
+        <div id="laterInfo" class="col card bg-success mx-auto">
           <div class="card-header text-white">Deposit or withdraw funds:</div>
           <div class="form-group form-inline">
             <label for="depositAmount">Deposit Amount:</label>
@@ -41,20 +41,24 @@
         </div>
       </div>
       <div class="row">
-        <div class="col">
-        <div class="col card bg-success">
-          <h5 class="card-title">Current Balance:</h5>
-          <div id="balance" class="card border-secondary">
-            <div class="card-body text-secondary">
-          <p id="balanceAmount" class="card-text">$0.00</p>
+        <div id="balanceCol" class="col">
+          <div class="col card bg-success mx-auto">
+            <h5 class="card-title">Current Balance:</h5>
+            <div id="balance" class="card border-secondary">
+              <div class="card-body text-secondary">
+                <p id="balanceAmount" class="card-text">$0.00</p>
+              </div>
+            </div>
           </div>
-        </div>
-        </div>
         </div>
       </div>
 
       <button type="submit" name="button">Submit</button>
+
     </form>
+
+    <div id="alertField"></div>
+
   </div>
 </body>
 </html>

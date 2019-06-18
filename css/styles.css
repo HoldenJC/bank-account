@@ -1,3 +1,7 @@
+#laterInfo {
+  display: none;
+}
+
 body {
   font-family: 'Cantarell', sans-serif;
 }
@@ -11,6 +15,7 @@ body {
 
 .card {
   margin: 5px;
+  max-width: 50vw;
 }
 
 .card h5 {
@@ -37,5 +42,10 @@ input {
   margin-right: auto;
   margin-bottom: 20px;
   text-align: center;
+}
 
+#userAlert {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
 }
