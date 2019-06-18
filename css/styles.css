@@ -1,11 +1,23 @@
+body {
+  font-family: 'Cantarell', sans-serif;
+}
+
 .card-header {
   margin-left: -0.925rem !important;
   margin-right: -0.925rem !important;
   margin-bottom: 10px;
+  font-weight: 600;
 }
 
 .card {
   margin: 5px;
+}
+
+.card h5 {
+  color: white;
+  margin: 5px;
+  text-align: center;
+  font-weight: 600;
 }
 
 label {
@@ -13,7 +25,17 @@ label {
   text-align: right !important;
   margin-right: 7.5px;
   width: 25% !important;
+  color: white;
 }
 input {
   width: 70% !important;
+}
+
+#balance {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  text-align: center;
+
 }
