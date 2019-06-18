@@ -1,0 +1,19 @@
+.card-header {
+  margin-left: -0.925rem !important;
+  margin-right: -0.925rem !important;
+  margin-bottom: 10px;
+}
+
+.card {
+  margin: 5px;
+}
+
+label {
+  display: inline-block !important;
+  text-align: right !important;
+  margin-right: 7.5px;
+  width: 25% !important;
+}
+input {
+  width: 70% !important;
+}
