@@ -19,11 +19,20 @@ BankAccount.prototype.withdrawFunds = function(moneyAmount){
 var bankAccount = new BankAccount();
 bankAccount.availableFunds = 0;
 
-function alertUser(name){
-  $("#alertField").append("<div id=\"userAlert\" class=\"alert alert-info alert-dismissible fade show\" role=\"alert\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button></div>");
+function alertUser(name, funds){
+  if(funds < 0){
+    $("#alertField").append("<div id=\"userAlert\" class=\"alert alert-danger alert-dismissible fade show\" role=\"alert\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button></div>");
 
-  $("#userAlert").append("Thank you for the transaction, " + name + ". You can view your updated balance above.");
+    $("#userAlert").append("Warning, " + name + ", you now owe the bank money. You can view how much you owe above.");
+  } else if (funds >= 0 && funds < 100000){
+    $("#alertField").append("<div id=\"userAlert\" class=\"alert alert-info alert-dismissible fade show\" role=\"alert\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button></div>");
 
+    $("#userAlert").append("Thank you for the transaction, " + name + ". You can view your updated balance above.");
+  } else if(funds >= 100000){
+    $("#alertField").append("<div id=\"userAlert\" class=\"alert alert-success alert-dismissible fade show\" role=\"alert\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button></div>");
+
+    $("#userAlert").append("Congratulations on your savings milestone, " + name + ", and thank you for your transaction. Having $" + funds + " saved is quite the accomplishment.");
+  }
 };
 
 $(function(){
@@ -52,7 +61,7 @@ $(function(){
 
     $("#balanceAmount").text("$" + bankAccount.availableFunds.toFixed(2));
 
-    alertUser(name);
+    alertUser(name, bankAccount.availableFunds);
 
   });
 

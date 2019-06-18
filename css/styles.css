@@ -4,6 +4,24 @@
 
 body {
   font-family: 'Cantarell', sans-serif;
+  background-image: url("../img/money-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  min-height: 100%;
+  background-position: center;
+  overflow: hidden;
+}
+
+.jumbotron {
+  text-align: center;
+  width: 60vw;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.centered {
+  text-align: center !important;
 }
 
 .card-header {
@@ -16,6 +34,10 @@ body {
 .card {
   margin: 5px;
   max-width: 50vw;
+}
+
+.bg-success {
+  background: rgb(40, 167, 69, 0.85) !important;
 }
 
 .card h5 {
@@ -48,4 +70,5 @@ input {
   margin-left: auto;
   margin-right: auto;
   margin-top: 10px;
+  max-width: 50vw;
 }
